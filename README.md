@@ -1,4 +1,7 @@
 # Events
+
+[![Join the chat at https://gitter.im/hack-athon-uk/events](https://badges.gitter.im/hack-athon-uk/events.svg)](https://gitter.im/hack-athon-uk/events?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Making the events.yaml file seperate from the main wiki + tools to maintain it
 
 ## Tool plans
