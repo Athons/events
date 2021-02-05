@@ -11,8 +11,7 @@ from utils import changed_after_days
 
 bot_message = """(bot message)
 
-The following event organisers have updated their github organisations this
-week:
+The following event organisers have updated their github organisations this week:
 
 {% for org in data %}* {{ org }}\n{% endfor %}
 """
