@@ -1,0 +1,33 @@
+
+name: Update Stats
+
+on:
+  schedule:
+    - cron: '0 4 * * 3'
+    # Run at four am UTC, as that's probably a reasonable time.
+  workflow_dispatch:
+
+jobs:
+  build:
+    # grant access to the CF_TOKEN env variable.
+    environment: ci
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Run the job
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        GITTER_TOKEN: ${{ secrets.GITTER_TOKEN }}
+        GITTER_COMMUNITY: ${{ secrets.GITTER_COMMUNITY }}
+        GITTER_CHANNEL:  ${{ secrets.GITTER_CHANNEL }}
+      run: |
+        python src
