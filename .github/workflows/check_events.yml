@@ -1,5 +1,4 @@
-
-name: Update Stats
+name: Run Tool
 
 on:
   schedule:
