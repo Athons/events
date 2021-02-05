@@ -1,115 +1,70 @@
 githubs:
-  - url: https://github.com/HHEU
-    location: N/A
+  - name: HHEU
     organisation: Hackathon Hackers EU
     about: Umbrella Org for the EU hackathon scene
-    reusableCode: true
-  - url: https://github.com/covhacksoc
-    location: Coventry University
+  - name: covhacksoc
     organisation: Coventry Hackathon Society
     about: Main organisation for CovHackSoc
-    reusableCode: true
-  - url: https://github.com/covhack
-    location: Coventry University
+  - name: covhack
     organisation: CovHack Event Org
     about: For seperating our event releated stuff
-    reusableCode: false
-  - url: https://github.com/HackSocNotts
-    location: Nottingham University
+  - name: HackSocNotts
     organisation: HackSocNotts
     about: 
-    reusableCode: true
-  - url: https://github.com/cssoc
-    location: Manchester University
+  - name: cssoc
     organisation: Manchester CS Society
     about: 
-    reusableCode: true
-  - url: https://github.com/hacksoc
-    location: York University
+  - name: hacksoc
     organisation: York Hack Soc
     about: 
-    reusableCode: true
-  - url: https://github.com/HackTheMidlands
-    location: N/A
+  - name: HackTheMidlands
     organisation: HackTheMidlands
     about: 
-    reusableCode: true
-  - url: https://github.com/brumhack
-    location: Birmingham University
+  - name: brumhack
     organisation: BrumHack
     about: Event is no longer active
-    reusableCode: false
-  - url: https://github.com/ducompsoc
-    location: Durham University
+  - name: ducompsoc
     organisation: Durham University Computing Society
     about: 
-    reusableCode: true
-  - url: https://github.com/hackcambridge
-    location: Cambridge University
+  - name: hackcambridge
     organisation: HackCambridge
     about: 
-    reusableCode: true
-  - url: https://github.com/HackSussex 
-    location: University of Sussex
+  - name: HackSussex 
     organisation: HackSussex
     about: 
-    reusableCode: true
-  - url: https://github.com/HackSheffield
-    location: University Of Sheffield
+  - name: HackSheffield
     organisation: HackSheffield
     about: 
-    reusableCode: true
-  - url: https://github.com/aston-css
-    location: Aston University
+  - name: aston-css
     organisation: Aston CS Society
     about: 
-    reusableCode: false
-  - url: https://github.com/HackBrunel
-    location: Brunel University London
+  - name: HackBrunel
     organisation: Brunel Tech Society
     about: 
-    reusableCode: false
-  - url: https://github.com/RUHacking
-    location: Reading University
+  - name: RUHacking
     organisation: RU Hacking
     about: 
-    reusableCode: false
-  - url: https://github.com/hacksurrey
-    location: University of Surrey
+  - name: hacksurrey
     organisation: HackSurrey
     about: 
-    reusableCode: false
-  - url: https://github.com/royalhackaway
-    location: Royal Hollaway
+  - name: royalhackaway
     organisation: Royal Hackaway
     about: 
-    reusableCode: false
-  - url: https://github.com/helloHackersSociety 
-    location: Manchester Metropolitan University
+  - name: helloHackersSociety 
     organisation: helloHackers
     about: 
-    reusableCode: false
-  - url: https://github.com/hacksmiths
-    location: Goldsmiths, University of London
+  - name: hacksmiths
     organisation: Goldsmiths Tech Society
     about: 
-    reusableCode: false
-  - url: https://github.com/compsoc-edinburgh
-    location: University of Edinburgh
+  - name: compsoc-edinburgh
     organisation: University of Edinburgh Technology Society
     about: 
-    reusableCode: true
-  - url: https://github.com/citytechsoc
-    location: City, University of London
+  - name: citytechsoc
     organisation: City Tech Soc
     about: 
-    reusableCode: false
-  - url: https://github.com/ucltechsoc
-    location: University College London
+  - name: ucltechsoc
     organisation: UCL Tech Soc
     about: 
-    reusableCode: false
-  - url: https://github.com/Hackathons-UK
-    location: N/A
+  - name: Hackathons-UK
     organisation: Hackathons UK
-    reusableCode: false
+    about:

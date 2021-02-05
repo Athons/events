@@ -11,4 +11,8 @@ def changed_after_days(days_before=7):
     """
     res = (datetime.datetime.now() - datetime.timedelta(days=days_before))
     # feedparser uses struct_time for some reason.
-    return res.timetuple()
+    return res
+
+
+def isodate(datestr):
+    return datetime.datetime.strptime(datestr, "%Y-%m-%dT%H:%M:%SZ")

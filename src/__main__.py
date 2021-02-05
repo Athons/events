@@ -24,7 +24,7 @@ def main(datapath):
     notify = Notify(config.gitter_token, config.gitter_community)
     go_back = changed_after_days()
 
-    ghf = GithubFeeds(datapath + '/github.yml', go_back)
+    ghf = GithubFeeds(config.github_token, datapath + '/github.yml', go_back)
 
     updates = ghf.update()
     results = []
@@ -36,8 +36,7 @@ def main(datapath):
         message_template = Template(bot_message)
         message = message_template.render(data=results)
         print(message)
-        #notify.send(config.gitter_channel, message)
-
+        notify.send(config.gitter_channel, message)
 
 if __name__ == "__main__":
     main('./sources')

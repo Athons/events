@@ -2,18 +2,21 @@
 Module to parse event organisers github atom feeds, to maybe get a sneaky hint
 of an event coming up :)
 """
-import feedparser
+import requests
 import yaml
+
+from utils import isodate
 
 
 class GithubFeeds:
     """
     Class for dealing with the github feeds.
     """
-    def __init__(self, data, go_back):
+    def __init__(self, token, data, go_back):
         """
         Our constructor, really doesn't do anything but read in the github urls
         """
+        self.token = token
         self.data = GithubFeeds.get_locations(data)
         self.go_back = go_back
 
@@ -24,7 +27,7 @@ class GithubFeeds:
         """
         data = {}
         for item in self.data:
-            feed_url = "%s.atom" % item['url']
+            feed_url = "https://api.github.com/users/%s/events" % item['name']
             (recently_updated, _) = self.feed(
                 feed_url, changed_after=self.go_back)
 
@@ -39,12 +42,22 @@ class GithubFeeds:
         """
         return yaml.load(open(path), Loader=yaml.Loader)['githubs']
 
-    @staticmethod
-    def feed(feed_url, changed_after):
+    def feed(self, feed_url, changed_after):
         """
         Our tool to read the feeds.
         """
-        fp = feedparser.parse(feed_url)
-        last_changed = fp['feed']['updated_parsed']
-        print(last_changed)
-        return (last_changed > changed_after, fp)
+        print("checking %s" % feed_url)
+        res = False
+        r = requests.get(
+            feed_url,
+            headers={
+                'Authorization': 'token %s' % self.token
+            }
+        )
+        fp = r.json()
+        if len(fp) > 0:
+            last_changed = isodate(fp[0]['created_at'])
+            res = last_changed > changed_after
+
+        return (res, fp)
+        
